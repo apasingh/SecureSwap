@@ -1,0 +1,3 @@
+[submodule "evershop"]
+	path = evershop
+	url = git@github.com:evershopcommerce/evershop.git
