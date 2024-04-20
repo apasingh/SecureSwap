@@ -8,7 +8,7 @@ We propose SecureSwap, a secure way of buying and selling goods. SecureSwap woul
 
 
 
-**To Run Website: **
+# To Run Website:
 
 1. cd react-list-products
 2. npm install
