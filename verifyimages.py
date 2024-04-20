@@ -4,8 +4,8 @@ import tensorflow as tf
 model = tf.keras.models.load_model("siamese_network.h5")
 
 # Load the two images
-image1 = tf.keras.preprocessing.image.load_img("image1.jpg")
-image2 = tf.keras.preprocessing.image.load_img("image2.jpg")
+image1 = tf.keras.preprocessing.image.load_img("../assets/image1.jpg")
+image2 = tf.keras.preprocessing.image.load_img("../assets/image2.jpg")
 
 # Convert the images to tensors
 image1 = tf.keras.preprocessing.image.img_to_array(image1)
