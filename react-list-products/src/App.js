@@ -8,12 +8,12 @@ function App() {
       <div>
       <HomePage />
     </div>
-        <div className="container">
-      <header className="header">
         <h1>My Products</h1>
-      </header>
-      <ProductList />
-      </div>
+        <div className='container'>
+
+        <ProductList />
+        </div>
+     
     </div>
   );
 }

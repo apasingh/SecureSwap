@@ -1,5 +1,5 @@
 import React from 'react';
-import sampleImage from '../logo192.png';
+import sampleImage from '../2.png';
 
 const ProductRow = () => {
   return (
