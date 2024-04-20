@@ -53,5 +53,58 @@ contract SecureSwap {
      * string reason: A textual description providing the reason for the dispute.
      */
     event TransactionDisputed(uint id, string reason);
+
+    /*
+     * Function to list a new product
+     * String memory _description: This is a temperory memory storage between transaction
+     * uint _price: The price that the item is list for
+     * uint _sellerDesposit: The collatoral payment the seller need to put down
+     */
+    function listProduct(string memory _description, uint _price, uint _sellerDeposit) public {
+        require(_sellerDeposit > _price, "Deposit must be higher than price");
+        productCount++;
+        //This specifies where the new product will be stored in the market 
+        products[productCount] = Product(productCount, payable(msg.sender), _description, _price, _sellerDeposit, false);
+        //Notify people if the product is on the chain
+        emit ProductListed(productCount, msg.sender, _price);
+    }
+
+    /*
+     * Function for a buyer to purchase a product
+     * unit _productId: The identifier of the purchase product.
+     */
+    function purchaseProduct(uint _productId) public payable {
+        //Find the item storeed in the marketplace
+        Product storage product = products[_productId];
+        require(msg.value == product.price, "Send exact product price");
+        require(product.isSold == false, "Product already sold");
+        product.isSold = true;
+        balances[product.seller] += msg.value;
+        emit ProductPurchased(_productId, msg.sender, product.price);
+    }  
+
+    /*
+     * Function to approve the transaction and release funds to the seller
+     */
+    function approveTransaction(uint _productId) public {
+        Product storage product = products[_productId];
+        require(balances[product.seller] >= product.price, "Insufficient escrowed funds");
+        product.seller.transfer(product.price);
+        balances[product.seller] -= product.price;
+        emit TransactionApproved(_productId, msg.sender, product.seller, product.price);
+    }
+
+    /*
+     * Function to handle disputes and refund the buyer
+     */
+    function disputeTransaction(uint _productId, string memory _reason) public {
+        Product storage product = products[_productId];
+        require(balances[product.seller] >= product.price, "Insufficient funds to refund");
+        product.isSold = false;
+        payable(msg.sender).transfer(product.price);
+        balances[product.seller] -= product.price;
+        emit TransactionDisputed(_productId, _reason);
+    }
+
 }
 
