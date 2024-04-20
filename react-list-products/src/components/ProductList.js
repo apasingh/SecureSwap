@@ -3,8 +3,6 @@ import ProductRow from './ProductRow';
 import Commerce from '@chec/commerce.js';
 require('dotenv').config();
 
-console.log(process.env);
-
 const commerce = new Commerce(process.env.sandbox_pubkey);
 
 class ProductList extends Component {
