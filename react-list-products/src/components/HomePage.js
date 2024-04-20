@@ -7,7 +7,7 @@ const HomePage = () => {
 
       <main>
         <div className = "header">
-        <img src="../ourlogo.png" alt="logo" style={{ float: 'left', width: '200px', height: '200px' }}/>
+        <img src="../2.png" alt="logo" style={{ float: 'left', width: '200px', height: '200px' }}/>
         <h1>SecureSwap</h1>
     </div>
         <img src = "../Body.png"></img>

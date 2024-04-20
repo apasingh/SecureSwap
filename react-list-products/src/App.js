@@ -9,9 +9,11 @@ function App() {
       <HomePage />
     </div>
         <h1>My Products</h1>
+        <div>
+          <img src="./Body.png"></img>
+        </div>
         <div className='container'>
-
-        <ProductList />
+        <ProductList/>
         </div>
      
     </div>
