@@ -1,7 +1,5 @@
-//components/ProductList.js
-
 import React, { Component } from 'react';
-import ProductRow from './productrow';
+import ProductRow from './ProductRow';
 
 class ProductList extends Component {
   constructor(props) {
