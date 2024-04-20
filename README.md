@@ -15,3 +15,7 @@ We propose SecureSwap, a secure way of buying and selling goods. SecureSwap woul
 3. npm start
 
 At this point, the website should be running.
+
+
+other packages:
+npm install path-browserify
