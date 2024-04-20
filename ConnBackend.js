@@ -6,13 +6,13 @@ const app = express();
 app.use(express.json()); 
 
 const contractAddress = ''; // Replace with the actual deployed contract address
-const contractInstance = new web3.eth.Contract(contractArtifact.abi, contractAddress);
+const contractInstance = new WakeLockSentineleb3.eth.Contract(contractArtifact.abi, contractAddress);
 
 app.post('/api/products', async (req, res) => {
     const { description, price, sellerDeposit } = req.body;
 
     try {
-        const accounts = await web3.eth.getAccounts();
+        const accounts = await Web3.eth.getAccounts();
         const result = await contractInstance.methods
             .listProduct(description, price, sellerDeposit)
             .send({ from: accounts[0] });
