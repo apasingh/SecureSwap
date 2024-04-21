@@ -19,3 +19,13 @@ At this point, the website should be running.
 
 other packages:
 npm install path-browserify
+
+
+# To Run Server
+
+You need to download these 2 package inorder for the server to run
+
+1. npm install express
+2. npm install web3
+3. node ConnBackend.js
+
