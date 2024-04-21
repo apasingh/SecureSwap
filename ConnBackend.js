@@ -18,13 +18,13 @@ app.post('/api/products', async (req, res) => {
   const { description, price, sellerDeposit } = req.body;
 
   try {
-    // const accounts = await web3.eth.getAccounts();
-    console.log(web3.eth.accounts);
+    const accounts = await web3.eth.getAccounts();
+    // console.log(web3.eth.accounts);
 
     // Ensure you handle the transaction signing properly here for production
-    // const result = await contractInstance.methods
-    //   .listProduct(description, web3.utils.toWei(price, 'ether'), sellerDeposit)
-    //   .send({ from: accounts[0] }); // You might want to let the client specify the `from` account
+    const result = await contractInstance.methods
+      .listProduct(description, web3.utils.toWei(price, 'ether'), sellerDeposit)
+      .send({ from: accounts[0] }); // You might want to let the client specify the `from` account
 
     // Consider just returning the transaction hash immediately
     res.json({ transactionHash: result.transactionHash });
