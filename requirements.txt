@@ -1,3 +1,4 @@
 # pip install scikit-image
 # pip install tensorflow_hub
 npm install @tensorflow/tfjs @tensorflow-models/coco-ssd
+npm install path-browserify
