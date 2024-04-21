@@ -29,3 +29,8 @@ You need to download these 2 package inorder for the server to run
 2. npm install web3
 3. node ConnBackend.js
 
+
+# Next Steps
+
+Our client and server have successfully connected, using Infura to link our server with our Ethereum smart contract. With more time, we would have liked to make the app access the smart contract to complete the transaction. Once the transaction has succeeded, we plan to use the smart contract to list products and fully utilize its capabilities. In the frontend, we want to improve the UI with all the user functionalities. We want to create separate experiences for buyers and sellers so they can fulfill their roles. We also want to explore using an external database to keep track of all transactions and images that are uploaded to the website.
+
