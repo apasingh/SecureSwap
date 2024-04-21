@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import ProductRow from './ProductRow';
 import Commerce from '@chec/commerce.js';
-require('dotenv').config();
 
-const commerce = new Commerce(process.env.sandbox_pubkey);
+// console.log(process.env);
+// const commerce = new Commerce(process.env.REACT_APP_SP);
+const commerce = new Commerce(pk_test_5684718dc48ac77971f3f1ff85ad94c80bec7e409b455);
 
 class ProductList extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class ProductList extends Component {
 
   componentDidMount() {
     commerce.products.list().then((result) => {
-      this.setState({ products: result.data });
+      this.setState({ products: result.data || [] });
     });
   }
 
