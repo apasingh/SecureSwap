@@ -65,7 +65,7 @@ const ImageComparison = () => {
 
     const matchingObjects = detectedObjects1.filter((obj1) => {
       return detectedObjects2.some((obj2) => {
-        const iouThreshold = 0.5; // Adjust this value to change the similarity threshold
+        const iouThreshold = 0.75; // Adjust this value to change the similarity threshold
         const box1 = obj1.bbox;
         const box2 = obj2.bbox;
         const iou = calculateIoU(box1, box2);
