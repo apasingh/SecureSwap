@@ -9,6 +9,9 @@ function App() {
       <div>
       <Header />
     </div>
+    <div>
+      <HomePage />
+    </div>
         <h1>My Products</h1>
         <div className='container'>
         <ProductList/>

@@ -1,16 +1,11 @@
 import React from 'react';
 import './HomePage.css';
+import Body from '../Body.png';
 
 const HomePage = () => {
   return (
     <div>
-      <img src = "../Body.png"></img>
-      <main>
-        <div className = "header">
-        <img src="../Secure.png" alt="logo" style={{ float: 'left', width: '200px', height: '200px' }}/>
-        <h1>SecureSwap</h1>
-    </div>
-      </main>
+      <img src = {Body} style={{ float: 'center', width: '100%', height: '700px' }}></img> 
     </div>
   );
 }
