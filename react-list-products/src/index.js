@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import 'bootstrap/dist/css/bootstrap.css';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -7,8 +8,6 @@ import ImageComparison from "./verifyimages";
 import HomePage from "./components/HomePage"; 
 import "./components/HomePage.css"; 
 
-import 'bootstrap/dist/css/bootstrap.css';
-import './index.css';
 
 <script type="text/javascript" src="https://assets.chec-cdn.com/v2/commerce.js"></script>
 

@@ -1,6 +1,6 @@
-import logo from './ourlogo.png';
 import ProductList from './components/ProductList';
 import HomePage from './components/HomePage';
+import Footer from './components/common/footer';
 
 function App() {
   return (
@@ -10,10 +10,9 @@ function App() {
     </div>
         <h1>My Products</h1>
         <div className='container'>
-
-        <ProductList />
+        <ProductList/>
         </div>
-     
+     <Footer/>
     </div>
   );
 }
