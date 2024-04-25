@@ -1,6 +1,6 @@
-import logo from './ourlogo.png';
 import ProductList from './components/ProductList';
 import HomePage from './components/HomePage';
+import Footer from './components/common/footer';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <div className='container'>
         <ProductList/>
         </div>
-     
+     <Footer/>
     </div>
   );
 }

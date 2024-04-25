@@ -1,17 +1,18 @@
 import React from 'react';
+import sampleImage from '../ourlogo.png';
 
-const ProductRow = ({ image, name, description, price }) => {
+const ProductRow = () => {
   return (
     <div className="row product">
       <div className="col-md-2">
-        <img src={image} alt={name} height="150" />
+        <img src={sampleImage} alt="Sample Image" height="150" />
       </div>
       <div className="col-md-8 product-detail">
-        <h4>{name}</h4>
-        <div dangerouslySetInnerHTML={{__html: description}}></div>
+        <h4>Blue T-Shirt</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
       <div className="col-md-2 product-price">
-        {price}
+        $19.99
       </div>
     </div>
   );
