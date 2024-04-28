@@ -7,13 +7,10 @@ function Header()
     return(
 
         <React.Fragment>
+            <div className='header'>
             <img src={OurLogo} alt="Our Logo"  style={{ float: 'center', width: '90px', height: '90px' }} />
-            <footer className='footer bg-footer'>
-            <div className = "header">
-                <h1>SecureSwap</h1>
+            <h1 style={{ color:'#81A969'}}>SecureSwap</h1>
             </div>
-            </footer>
-            
         </React.Fragment>
     );
 }

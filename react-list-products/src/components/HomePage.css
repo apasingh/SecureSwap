@@ -1,8 +1,13 @@
-.header {
-    padding: 20px;
-    text-align: center;
-    background: #10806a80;
-    color: white;
-    font-size: 30px;
-    text-align: center;
-    }
+.header img {
+    float: left;
+    width: 100px;
+    height: 100px;
+    background: #555;
+  }
+
+.header h1 {
+  position: relative;
+  text-align: center;
+  top: 18px;
+  left: 10px;
+}
