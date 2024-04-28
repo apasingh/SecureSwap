@@ -42,3 +42,12 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+
+async function connectMetaMask() {
+  try {
+    const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+    // Handle the connected accounts
+  } catch (error) {
+    console.error(error);
+  }
+}
