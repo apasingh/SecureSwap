@@ -1,5 +1,6 @@
 import React from 'react';
-import sampleImage from '../2.png';
+import sampleImage from '../Secure.png';
+
 
 const ProductRow = () => {
   return (
@@ -14,6 +15,9 @@ const ProductRow = () => {
       <div className="col-md-2 product-price">
         $19.99
       </div>
+      <button className="btn btn-primary" style={{ backgroundColor: '#33443C'}}>
+        Purchase
+      </button>
     </div>
   );
 }
