@@ -36,5 +36,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@mantine/core": "^7.9.0",
+    "@mantine/form": "^7.9.0",
+    "@mantine/hooks": "^7.9.0",
+    "@usedapp/core": "^1.2.13",
+    "ethers": "^5.7.2"
   }
 }
