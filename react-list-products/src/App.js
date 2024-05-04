@@ -10,6 +10,7 @@ import ProductList from './components/ProductList';
 import HomePage from './components/HomePage';
 
 function App() {
+  const { ethereum } = window;
   return (
     <div>
       <div>
